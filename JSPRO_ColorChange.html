@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Change Your Color</title>
+    <style>
+       
+      body {
+        text-align: center;
+        padding-top: 100px;
+        transition: background-color 0.5s ease;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Click the Button to Change Background Color</h1>
+     
+    <button onclick="changeColor()">Change Color</button>
+    <button onclick="changeColorTo('#FF5733')">Red</button>
+    <button onclick="changeColorTo('#33FF57')">Green</button>
+    <button onclick="changeColorTo('#3357FF')">Blue</button>
+    <button onclick="changeColorTo('#F1C40F')">Yellow</button>
+    <button onclick="changeColorTo('#9B59B6')">Purple</button>
+
+   
+
+    <script>
+      function changeColor() {
+        const colors = [
+          "#FF5733",
+          "#33FF57",
+          "#3357FF",
+          "#F1C40F",
+          "#9B59B6",
+          "#1ABC9C",
+          "#E74C3C",
+        ];
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        document.body.style.backgroundColor = colors[randomIndex];
+      }
+
+      function changeColorTo(color) {
+        document.body.style.backgroundColor = color;
+      }
+    </script>
+    </script>
+  </body>
+</html>
